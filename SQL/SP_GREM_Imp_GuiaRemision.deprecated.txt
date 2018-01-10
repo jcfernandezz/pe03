@@ -65,3 +65,11 @@ BEGIN
 	where DOCTYPE=@TipoRef and DOCNUMBR=@NumeroRef
 order by linea
 END
+go
+
+IF DATABASE_PRINCIPAL_ID('rol_perucontador') IS NULL
+	create role rol_perucontador;
+go
+
+grant execute on dbo.SP_GREM_Imp_GuiaRemision to rol_perucontador, dyngrp;
+go
