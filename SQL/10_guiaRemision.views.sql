@@ -70,4 +70,14 @@ go
 
 -------------------------------------------------------------------
 grant select on dbo.gremGuiaRemision to rol_perucontador, dyngrp;
+
+
 go
+
+--
+--dar permisos al id de tarea Peru_default
+--Producto GREM
+--Tió Archivos
+--Serie Inventario
+--TODOS
+--Ejecutar grants de gp
