@@ -5,7 +5,7 @@
     <DataSource Name="DS_GuiaRemision">
       <ConnectionProperties>
         <DataProvider>SQL</DataProvider>
-        <ConnectString>Data Source=MEMCODB02;Initial Catalog=ZPER2</ConnectString>
+        <ConnectString>Data Source=MEMCODB02;Initial Catalog=mPER2</ConnectString>
         <IntegratedSecurity>true</IntegratedSecurity>
       </ConnectionProperties>
       <rd:SecurityType>Integrated</rd:SecurityType>
@@ -114,6 +114,10 @@ and gremNumeroGuia = @NumeroGuia</CommandText>
           <DataField>item</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="itemnmbr">
+          <DataField>itemnmbr</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="um">
           <DataField>um</DataField>
           <rd:TypeName>System.String</rd:TypeName>
@@ -129,26 +133,25 @@ and gremNumeroGuia = @NumeroGuia</CommandText>
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>0.65105in</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>1.50521in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.64063in</Width>
+                  <Width>3.70832in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.6198in</Width>
+                  <Width>1.02605in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>0.25in</Height>
+                  <Height>0.15in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="cant">
-                          <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
@@ -160,7 +163,9 @@ and gremNumeroGuia = @NumeroGuia</CommandText>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>cant</rd:DefaultName>
@@ -174,21 +179,20 @@ and gremNumeroGuia = @NumeroGuia</CommandText>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox71">
-                          <CanGrow>true</CanGrow>
+                        <Textbox Name="itemnmbr">
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
+                                  <Value>=Fields!itemnmbr.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox71</rd:DefaultName>
+                          <rd:DefaultName>itemnmbr</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -200,7 +204,6 @@ and gremNumeroGuia = @NumeroGuia</CommandText>
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="item">
-                          <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
@@ -225,7 +228,6 @@ and gremNumeroGuia = @NumeroGuia</CommandText>
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="um">
-                          <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
@@ -267,341 +269,339 @@ and gremNumeroGuia = @NumeroGuia</CommandText>
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
-            <Top>3.96056in</Top>
-            <Left>0.54042in</Left>
-            <Height>0.25in</Height>
-            <Width>6.76563in</Width>
+            <Left>0.29042in</Left>
+            <Height>0.15in</Height>
+            <Width>6.89063in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
             </Style>
           </Tablix>
-          <Textbox Name="CUSTNAME">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=First(Fields!CUSTNAME.Value, "DataSet1")</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>CUSTNAME</rd:DefaultName>
-            <Top>1.23833in</Top>
-            <Left>0.54042in</Left>
-            <Height>0.25in</Height>
-            <Width>2.94791in</Width>
-            <ZIndex>1</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="txrgnnum">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=First(Fields!txrgnnum.Value, "DataSet1")</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>txrgnnum</rd:DefaultName>
-            <Top>1.23833in</Top>
-            <Left>5.86333in</Left>
-            <Height>0.25in</Height>
-            <Width>1.79167in</Width>
-            <ZIndex>2</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="ADDRESS1">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=First(Fields!ADDRESS1.Value, "DataSet1")</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>ADDRESS1</rd:DefaultName>
-            <Top>1.73833in</Top>
-            <Left>0.54042in</Left>
-            <Height>0.25in</Height>
-            <Width>2.94791in</Width>
-            <ZIndex>3</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-            </Style>
-          </Textbox>
-          <Textbox Name="ADDRESS2">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=First(Fields!ADDRESS2.Value, "DataSet1")</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>ADDRESS2</rd:DefaultName>
-            <Top>1.98833in</Top>
-            <Left>0.54042in</Left>
-            <Height>0.25in</Height>
-            <Width>2.94791in</Width>
-            <ZIndex>4</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-            </Style>
-          </Textbox>
-          <Textbox Name="ADDRESS3">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=First(Fields!ADDRESS3.Value, "DataSet1")</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>ADDRESS3</rd:DefaultName>
-            <Top>2.23833in</Top>
-            <Left>0.54042in</Left>
-            <Height>0.25in</Height>
-            <Width>2.94791in</Width>
-            <ZIndex>5</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-            </Style>
-          </Textbox>
-          <Textbox Name="GREM_Address_1">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=First(Fields!GREM_Address_1.Value, "DataSet1")</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>GREM_Address_1</rd:DefaultName>
-            <Top>1.73833in</Top>
-            <Left>4.50917in</Left>
-            <Height>0.25in</Height>
-            <Width>2.6875in</Width>
-            <ZIndex>6</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-            </Style>
-          </Textbox>
-          <Textbox Name="GREM_Address_2">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=First(Fields!GREM_Address_2.Value, "DataSet1")</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>GREM_Address_2</rd:DefaultName>
-            <Top>1.98833in</Top>
-            <Left>4.50917in</Left>
-            <Height>0.25in</Height>
-            <Width>2.6875in</Width>
-            <ZIndex>7</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-            </Style>
-          </Textbox>
-          <Textbox Name="GREM_Address_3">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=First(Fields!GREM_Address_3.Value, "DataSet1")</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>GREM_Address_3</rd:DefaultName>
-            <Top>2.23833in</Top>
-            <Left>4.50917in</Left>
-            <Height>0.25in</Height>
-            <Width>2.6875in</Width>
-            <ZIndex>8</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-            </Style>
-          </Textbox>
-          <Textbox Name="DOCDATE">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=First(Fields!DOCDATE.Value, "DataSet1")</Value>
-                    <Style>
-                      <Format>dd/MM/yyyy</Format>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>DOCDATE</rd:DefaultName>
-            <Top>2.85292in</Top>
-            <Left>0.54042in</Left>
-            <Height>0.25in</Height>
-            <Width>1in</Width>
-            <ZIndex>9</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="PYMNTTRM">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=First(Fields!PYMNTTRM.Value, "DataSet1")</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>PYMNTTRM</rd:DefaultName>
-            <Top>2.85292in</Top>
-            <Left>5.87375in</Left>
-            <Height>0.25in</Height>
-            <Width>1in</Width>
-            <ZIndex>10</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="PORDNMBR">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=First(Fields!PORDNMBR.Value, "DataSet1")</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>PORDNMBR</rd:DefaultName>
-            <Top>3.17236in</Top>
-            <Left>0.54042in</Left>
-            <Height>0.25in</Height>
-            <Width>1in</Width>
-            <ZIndex>11</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
         </ReportItems>
-        <Height>24.63836cm</Height>
+        <Height>11.43229cm</Height>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
       </Body>
-      <Width>20.47558cm</Width>
+      <Width>20.18454cm</Width>
       <Page>
+        <PageHeader>
+          <Height>13.44083cm</Height>
+          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <PrintOnLastPage>true</PrintOnLastPage>
+          <ReportItems>
+            <Textbox Name="CUSTNAME">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=First(Fields!CUSTNAME.Value, "DataSet1")</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>CUSTNAME</rd:DefaultName>
+              <Top>2.68833in</Top>
+              <Left>0.66542in</Left>
+              <Height>0.25in</Height>
+              <Width>5.07291in</Width>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="txrgnnum">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=First(Fields!txrgnnum.Value, "DataSet1")</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>txrgnnum</rd:DefaultName>
+              <Top>2.68833in</Top>
+              <Left>5.86333in</Left>
+              <Height>0.25in</Height>
+              <Width>1.79167in</Width>
+              <ZIndex>1</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="ADDRESS1">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=First(Fields!ADDRESS1.Value, "DataSet1")</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>ADDRESS1</rd:DefaultName>
+              <Top>3.27583in</Top>
+              <Left>0.66542in</Left>
+              <Height>0.2in</Height>
+              <Width>3.54166in</Width>
+              <ZIndex>2</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+              </Style>
+            </Textbox>
+            <Textbox Name="ADDRESS2">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=First(Fields!ADDRESS2.Value, "DataSet1")</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>ADDRESS2</rd:DefaultName>
+              <Top>3.47583in</Top>
+              <Left>0.66542in</Left>
+              <Height>0.2in</Height>
+              <Width>3.54166in</Width>
+              <ZIndex>3</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+              </Style>
+            </Textbox>
+            <Textbox Name="ADDRESS3">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=First(Fields!ADDRESS3.Value, "DataSet1")</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>ADDRESS3</rd:DefaultName>
+              <Top>3.67583in</Top>
+              <Left>0.66542in</Left>
+              <Height>0.2in</Height>
+              <Width>3.54166in</Width>
+              <ZIndex>4</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+              </Style>
+            </Textbox>
+            <Textbox Name="GREM_Address_1">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=First(Fields!GREM_Address_1.Value, "DataSet1")</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>GREM_Address_1</rd:DefaultName>
+              <Top>3.27583in</Top>
+              <Left>4.75917in</Left>
+              <Height>0.2in</Height>
+              <Width>3.01042in</Width>
+              <ZIndex>5</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+              </Style>
+            </Textbox>
+            <Textbox Name="GREM_Address_2">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=First(Fields!GREM_Address_2.Value, "DataSet1")</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>GREM_Address_2</rd:DefaultName>
+              <Top>3.47583in</Top>
+              <Left>4.75917in</Left>
+              <Height>0.2in</Height>
+              <Width>3.01042in</Width>
+              <ZIndex>6</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+              </Style>
+            </Textbox>
+            <Textbox Name="GREM_Address_3">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=First(Fields!GREM_Address_3.Value, "DataSet1")</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>GREM_Address_3</rd:DefaultName>
+              <Top>3.67583in</Top>
+              <Left>4.75917in</Left>
+              <Height>0.2in</Height>
+              <Width>3.01042in</Width>
+              <ZIndex>7</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+              </Style>
+            </Textbox>
+            <Textbox Name="DOCDATE">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=First(Fields!DOCDATE.Value, "DataSet1")</Value>
+                      <Style>
+                        <Format>dd/MM/yyyy</Format>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>DOCDATE</rd:DefaultName>
+              <Top>4.06542in</Top>
+              <Left>0.54042in</Left>
+              <Height>0.25in</Height>
+              <Width>1in</Width>
+              <ZIndex>8</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="PYMNTTRM">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=First(Fields!PYMNTTRM.Value, "DataSet1")</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>PYMNTTRM</rd:DefaultName>
+              <Top>4.06542in</Top>
+              <Left>5.99875in</Left>
+              <Height>0.25in</Height>
+              <Width>1.65625in</Width>
+              <ZIndex>9</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="PORDNMBR">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=First(Fields!PORDNMBR.Value, "DataSet1")</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>PORDNMBR</rd:DefaultName>
+              <Top>4.48486in</Top>
+              <Left>0.54042in</Left>
+              <Height>0.25in</Height>
+              <Width>1in</Width>
+              <ZIndex>10</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+          </ReportItems>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </PageHeader>
         <PageFooter>
-          <Height>3.81528cm</Height>
+          <Height>3.20674cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
             <Textbox Name="Textbox1">
-              <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
@@ -615,10 +615,10 @@ and gremNumeroGuia = @NumeroGuia</CommandText>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>0.29167in</Top>
-              <Left>5.72792in</Left>
-              <Height>0.22917in</Height>
-              <Width>2.33333in</Width>
+              <Top>0.55278in</Top>
+              <Left>6.24875in</Left>
+              <Height>0.2in</Height>
+              <Width>1.69792in</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -626,7 +626,6 @@ and gremNumeroGuia = @NumeroGuia</CommandText>
               </Style>
             </Textbox>
             <Textbox Name="Textbox2">
-              <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
@@ -640,10 +639,10 @@ and gremNumeroGuia = @NumeroGuia</CommandText>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox2</rd:DefaultName>
-              <Top>0.52084in</Top>
-              <Left>5.72792in</Left>
-              <Height>0.25in</Height>
-              <Width>2.32292in</Width>
+              <Top>0.76667in</Top>
+              <Left>6.24875in</Left>
+              <Height>0.2in</Height>
+              <Width>1.69792in</Width>
               <ZIndex>1</ZIndex>
               <Style>
                 <Border>
@@ -652,7 +651,6 @@ and gremNumeroGuia = @NumeroGuia</CommandText>
               </Style>
             </Textbox>
             <Textbox Name="GREMTranspLicenc">
-              <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
@@ -666,10 +664,10 @@ and gremNumeroGuia = @NumeroGuia</CommandText>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>GREMTranspLicenc</rd:DefaultName>
-              <Top>0.77084in</Top>
-              <Left>5.72792in</Left>
-              <Height>0.25in</Height>
-              <Width>2.29167in</Width>
+              <Top>0.96667in</Top>
+              <Left>6.24875in</Left>
+              <Height>0.2in</Height>
+              <Width>1.69792in</Width>
               <ZIndex>2</ZIndex>
               <Style>
                 <Border>
@@ -678,7 +676,6 @@ and gremNumeroGuia = @NumeroGuia</CommandText>
               </Style>
             </Textbox>
             <Textbox Name="Textbox93">
-              <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
@@ -692,9 +689,9 @@ and gremNumeroGuia = @NumeroGuia</CommandText>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox93</rd:DefaultName>
-              <Top>0.52777in</Top>
-              <Left>1.24875in</Left>
-              <Height>0.25in</Height>
+              <Top>0.8861in</Top>
+              <Left>1.12375in</Left>
+              <Height>0.2in</Height>
               <Width>1.64583in</Width>
               <ZIndex>3</ZIndex>
               <Style>
@@ -704,7 +701,6 @@ and gremNumeroGuia = @NumeroGuia</CommandText>
               </Style>
             </Textbox>
             <Textbox Name="GREMTranspNombre">
-              <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
@@ -718,10 +714,10 @@ and gremNumeroGuia = @NumeroGuia</CommandText>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>GREMTranspNombre</rd:DefaultName>
-              <Top>0.27777in</Top>
-              <Left>1.24875in</Left>
-              <Height>0.25in</Height>
-              <Width>2.72917in</Width>
+              <Top>0.6861in</Top>
+              <Left>1.12375in</Left>
+              <Height>0.2in</Height>
+              <Width>2.875in</Width>
               <ZIndex>4</ZIndex>
               <Style>
                 <Border>

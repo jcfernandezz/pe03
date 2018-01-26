@@ -1,7 +1,7 @@
 
 alter view dbo.gremSopIvDetalle as
 	select s.SOPTYPE, s.SOPNUMBE, s.LNITMSEQ, s.QTYFULFI,
-		s.ITEMDESC, s.UOFM, ns.nsaIFNit 
+		s.itemnmbr, s.ITEMDESC, s.UOFM, ns.nsaIFNit 
 	from SOP10200 s
 	inner join sop10100 cab
 		on cab.sopnumbe = s.SOPNUMBE
@@ -11,7 +11,7 @@ alter view dbo.gremSopIvDetalle as
 
 	union all
 	select s.SOPTYPE, s.SOPNUMBE, s.LNITMSEQ, s.QTYFULFI,
-		s.ITEMDESC, s.UOFM, ns.nsaIFNit 
+		s.itemnmbr, s.ITEMDESC, s.UOFM, ns.nsaIFNit 
 	from SOP30300 s
 	inner join sop30200 cab
 		on cab.sopnumbe = s.SOPNUMBE
@@ -21,14 +21,14 @@ alter view dbo.gremSopIvDetalle as
 
 	union all
 	select a.DOCTYPE, a.DOCNUMBR, a.LNSEQNBR, a.TRXQTY,
-		b.ITEMDESC, a.UOFM, null
+		a.itemnmbr, b.ITEMDESC, a.UOFM, null
 	from IV30300 a
 		left join IV00101 b 
 			on a.ITEMNMBR=b.ITEMNMBR
 
 	union all
 	select a.IVDOCTYP, a.IVDOCNBR, a.LNSEQNBR, a.TRXQTY,
-		b.ITEMDESC, a.UOFM, null
+		a.itemnmbr, b.ITEMDESC, a.UOFM, null
 	from IV10001 a
 		left join IV00101 b 
 			on a.ITEMNMBR=b.ITEMNMBR
@@ -56,6 +56,7 @@ alter view dbo.gremGuiaRemision as
 		c.GREMTranspLicenc,
 		det.LNITMSEQ linea,
 		det.QTYFULFI cant, 
+		det.itemnmbr,
 		det.ITEMDESC item, 
 		det.UOFM as um
 	from tblGREM001 a
@@ -78,6 +79,9 @@ go
 --dar permisos al id de tarea Peru_default
 --Producto GREM
 --Tió Archivos
---Serie Inventario
+--Serie Inventario, compras
 --TODOS
 --Ejecutar grants de gp
+
+--RUTA DE GUIA DE REMISION
+--update tblGrem006 set interid = 'ZPER2', RPRTNAME= 'ZPER2'
