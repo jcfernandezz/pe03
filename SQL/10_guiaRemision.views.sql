@@ -58,7 +58,9 @@ alter view dbo.gremGuiaRemision as
 		det.QTYFULFI cant, 
 		det.itemnmbr,
 		det.ITEMDESC item, 
-		det.UOFM as um
+		det.UOFM as um,
+		det.soptype,
+		det.sopnumbe
 	from tblGREM001 a
 	inner join dbo.gremSopIvDetalle det
 		on det.SOPTYPE = a.GREMReferenciaTipo
