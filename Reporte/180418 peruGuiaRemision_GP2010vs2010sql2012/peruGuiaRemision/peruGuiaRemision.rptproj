@@ -16,13 +16,13 @@
       <Options>
         <OutputPath>bin\Debug</OutputPath>
         <TargetServerVersion>SSRS2008R2</TargetServerVersion>
-        <TargetServerURL>http://memcodb02/Reportserver</TargetServerURL>
-        <TargetFolder>ZPER2/ZPER2</TargetFolder>
-        <TargetDataSourceFolder>ZPER2/Data Sources</TargetDataSourceFolder>
+        <TargetServerURL>http://gpsandbox/Reportserver</TargetServerURL>
+        <TargetFolder>mPER2/mPER2</TargetFolder>
+        <TargetDataSourceFolder>mPER2/Data Sources</TargetDataSourceFolder>
         <OverwriteDataSources>true</OverwriteDataSources>
-        <TargetDatasetFolder>ZPER2/Datasets</TargetDatasetFolder>
+        <TargetDatasetFolder>mPER2/Datasets</TargetDatasetFolder>
         <OverwriteDatasets>true</OverwriteDatasets>
-        <TargetReportPartFolder>ZPER2/Report Parts</TargetReportPartFolder>
+        <TargetReportPartFolder>mPER2/Report Parts</TargetReportPartFolder>
         <StartItem>Guia de Remisión.rdl</StartItem>
       </Options>
     </Configuration>
@@ -47,7 +47,6 @@
         <TargetServerURL>http://memcodb02/Reportserver</TargetServerURL>
         <TargetFolder>MPER2/MPER2</TargetFolder>
         <TargetDataSourceFolder>MPER2/Data Sources</TargetDataSourceFolder>
-        <OverwriteDataSources>true</OverwriteDataSources>
         <TargetDatasetFolder>MPER2/Datasets</TargetDatasetFolder>
         <OverwriteDatasets>true</OverwriteDatasets>
         <TargetReportPartFolder>MPER2/Report Parts</TargetReportPartFolder>
