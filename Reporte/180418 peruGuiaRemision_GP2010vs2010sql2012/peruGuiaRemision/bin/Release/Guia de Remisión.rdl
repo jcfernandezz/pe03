@@ -5,7 +5,7 @@
     <DataSource Name="DS_GuiaRemision">
       <ConnectionProperties>
         <DataProvider>SQL</DataProvider>
-        <ConnectString>Data Source=MEMCODB02;Initial Catalog=zPER2</ConnectString>
+        <ConnectString>Data Source=memcodb02;Initial Catalog=MPER2</ConnectString>
         <IntegratedSecurity>true</IntegratedSecurity>
       </ConnectionProperties>
       <rd:SecurityType>Integrated</rd:SecurityType>
@@ -133,10 +133,10 @@ and gremNumeroGuia = @NumeroGuia</CommandText>
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>0.65105in</Width>
+                  <Width>0.86459in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.50521in</Width>
+                  <Width>0.91146in</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>3.70832in</Width>
@@ -269,9 +269,9 @@ and gremNumeroGuia = @NumeroGuia</CommandText>
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
-            <Left>0.29042in</Left>
+            <Left>0.66542in</Left>
             <Height>0.15in</Height>
-            <Width>6.89063in</Width>
+            <Width>6.51042in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -289,7 +289,7 @@ and gremNumeroGuia = @NumeroGuia</CommandText>
       <Width>20.18454cm</Width>
       <Page>
         <PageHeader>
-          <Height>13.44083cm</Height>
+          <Height>14.18166cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -516,7 +516,7 @@ and gremNumeroGuia = @NumeroGuia</CommandText>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>DOCDATE</rd:DefaultName>
-              <Top>4.06542in</Top>
+              <Top>4.24042in</Top>
               <Left>0.54042in</Left>
               <Height>0.25in</Height>
               <Width>1in</Width>
@@ -545,7 +545,7 @@ and gremNumeroGuia = @NumeroGuia</CommandText>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>PYMNTTRM</rd:DefaultName>
-              <Top>4.06542in</Top>
+              <Top>4.24042in</Top>
               <Left>5.99875in</Left>
               <Height>0.25in</Height>
               <Width>1.65625in</Width>
@@ -574,7 +574,7 @@ and gremNumeroGuia = @NumeroGuia</CommandText>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>PORDNMBR</rd:DefaultName>
-              <Top>4.48486in</Top>
+              <Top>4.73486in</Top>
               <Left>0.54042in</Left>
               <Height>0.25in</Height>
               <Width>1in</Width>
@@ -615,10 +615,10 @@ and gremNumeroGuia = @NumeroGuia</CommandText>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>0.55278in</Top>
-              <Left>6.24875in</Left>
+              <Top>0.30278in</Top>
+              <Left>6.30083in</Left>
               <Height>0.2in</Height>
-              <Width>1.69792in</Width>
+              <Width>1.64584in</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -639,10 +639,10 @@ and gremNumeroGuia = @NumeroGuia</CommandText>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox2</rd:DefaultName>
-              <Top>0.76667in</Top>
-              <Left>6.24875in</Left>
+              <Top>0.51667in</Top>
+              <Left>6.30083in</Left>
               <Height>0.2in</Height>
-              <Width>1.69792in</Width>
+              <Width>1.64584in</Width>
               <ZIndex>1</ZIndex>
               <Style>
                 <Border>
@@ -664,10 +664,10 @@ and gremNumeroGuia = @NumeroGuia</CommandText>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>GREMTranspLicenc</rd:DefaultName>
-              <Top>0.96667in</Top>
-              <Left>6.24875in</Left>
+              <Top>0.71667in</Top>
+              <Left>6.30083in</Left>
               <Height>0.2in</Height>
-              <Width>1.69792in</Width>
+              <Width>1.64584in</Width>
               <ZIndex>2</ZIndex>
               <Style>
                 <Border>
@@ -689,8 +689,8 @@ and gremNumeroGuia = @NumeroGuia</CommandText>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox93</rd:DefaultName>
-              <Top>0.8861in</Top>
-              <Left>1.12375in</Left>
+              <Top>0.6736in</Top>
+              <Left>0.88625in</Left>
               <Height>0.2in</Height>
               <Width>1.64583in</Width>
               <ZIndex>3</ZIndex>
@@ -714,10 +714,10 @@ and gremNumeroGuia = @NumeroGuia</CommandText>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>GREMTranspNombre</rd:DefaultName>
-              <Top>0.6861in</Top>
-              <Left>1.12375in</Left>
+              <Top>0.46527in</Top>
+              <Left>0.88625in</Left>
               <Height>0.2in</Height>
-              <Width>2.875in</Width>
+              <Width>3.32083in</Width>
               <ZIndex>4</ZIndex>
               <Style>
                 <Border>

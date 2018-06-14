@@ -5,7 +5,7 @@
     <DataSource Name="DS_GuiaRemision">
       <ConnectionProperties>
         <DataProvider>SQL</DataProvider>
-        <ConnectString>Data Source=MEMCODB02;Initial Catalog=mPER2</ConnectString>
+        <ConnectString>Data Source=gpsandbox;Initial Catalog=mPER2</ConnectString>
         <IntegratedSecurity>true</IntegratedSecurity>
       </ConnectionProperties>
       <rd:SecurityType>Integrated</rd:SecurityType>
